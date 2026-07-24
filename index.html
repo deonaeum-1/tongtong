@@ -64,7 +64,7 @@
         <option value="vi">Tiếng Việt</option><option value="th">ไทย</option>
       </select>
       <button class="btn" id="startBtn">대화 시작 · Start</button>
-      <div style="opacity:.4;font-size:11px">버전 v15</div>
+      <div style="opacity:.4;font-size:11px">버전 v16</div>
     </div>
   </div>
 
@@ -109,6 +109,10 @@ function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.re
 
 const myId=Math.random().toString(36).slice(2,10);
 let myLang='ko', peerLang=null, client=null, topic=null, acked=false;
+
+// 폰/브라우저의 언어를 기본값으로 자동 선택 (일본 폰이면 日本語가 미리 골라짐)
+const navLang=(navigator.language||'en').slice(0,2);
+if(LOCALE[navLang]) document.getElementById('myLang').value=navLang;
 
 const params=new URLSearchParams(location.search);
 let room=params.get('room');
