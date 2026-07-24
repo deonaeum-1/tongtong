@@ -1,0 +1,26 @@
+name: tongtong
+description: "통TONG - 대면 실시간 통역 채팅"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mqtt_client: ^10.5.1
+  speech_to_text: ^7.0.0
+  flutter_tts: ^4.1.0
+  translator: ^1.0.3+1
+  http: ^1.2.2
+  flutter_svg: ^2.0.10
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
